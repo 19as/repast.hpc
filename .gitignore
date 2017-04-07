@@ -31,3 +31,4 @@ Profiling
 # Built components of the tutorial
 docs/OnlineTutorial/SRC/work/*
 
+build/*
