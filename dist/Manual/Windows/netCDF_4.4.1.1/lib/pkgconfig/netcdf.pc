@@ -1,13 +1,16 @@
-prefix=C:/Program Files/netCDF
-exec_prefix=C:/Program Files/netCDF
-libdir=C:/Program Files/netCDF/lib
-includedir=C:/Program Files/netCDF/include
-ccompiler=C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/x86_amd64/cl.exe
+prefix=/home/livetau/windows/netcdf-4.1.3
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+ccompiler=/usr/local/pkgs/ptoolswin-1.0/bin/mpicc
+cppcompiler=/usr/local/pkgs/ptoolswin-1.0/bin/mpicxx
+fcompiler=/usr/local/pkgs/ptoolswin-1.0/bin/mpif90
+fflags=-g -O2 -I${includedir}
+flibs=-lnetcdff -lnetcdf
 
-Name: netCDF
-Description: NetCDF Client Library for C
-URL: http://www.unidata.ucar.edu/netcdf
-Version: 4.4.1.1
-Libs: -L${libdir} -lnetcdf -lhdf5-shared -lhdf5_hl-shared -lzlib -lcurl_imp
+Name: netcdf
+Description: NetCDF Client Library
+Version: 4.1.3
+Libs: -L${libdir} -lnetcdf
 Cflags: -I${includedir}
 
